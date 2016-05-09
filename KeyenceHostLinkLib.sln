@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+# SharpDevelop 4.4
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KeyenceHostLinkLib", "KeyenceHostLinkLib\KeyenceHostLinkLib.vbproj", "{C9624A4B-45FE-4DA7-96B5-7680D404583E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Test first app", "Test first app\Test first app.vbproj", "{CD073B5E-2FC3-4E97-AA2A-1FA020AF0830}"
+EndProject
+Project("") = "KeyenceHostLinkLib", "KeyenceHostLinkLib\KeyenceHostLinkLib.vbproj", "3EFC9820-4700-46D6-9B75-AD92F99C647B"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9624A4B-45FE-4DA7-96B5-7680D404583E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9624A4B-45FE-4DA7-96B5-7680D404583E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9624A4B-45FE-4DA7-96B5-7680D404583E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9624A4B-45FE-4DA7-96B5-7680D404583E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD073B5E-2FC3-4E97-AA2A-1FA020AF0830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD073B5E-2FC3-4E97-AA2A-1FA020AF0830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD073B5E-2FC3-4E97-AA2A-1FA020AF0830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD073B5E-2FC3-4E97-AA2A-1FA020AF0830}.Release|Any CPU.Build.0 = Release|Any CPU
+		3EFC9820-4700-46D6-9B75-AD92F99C647B.Debug|Any CPU.Build.0 = Debug|Any CPU
+		3EFC9820-4700-46D6-9B75-AD92F99C647B.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		3EFC9820-4700-46D6-9B75-AD92F99C647B.Release|Any CPU.Build.0 = Release|Any CPU
+		3EFC9820-4700-46D6-9B75-AD92F99C647B.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
