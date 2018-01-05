@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PLCNumberBox
+Partial Class PLCEditBox
 	Inherits PLCBaseControl
 
 	'UserControl overrides dispose to clean up the component list.
@@ -22,34 +22,45 @@ Partial Class PLCNumberBox
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
+		Me.butWrite = New System.Windows.Forms.Button()
 		Me.txtValue = New System.Windows.Forms.TextBox()
 		Me.SuspendLayout()
 		'
+		'butWrite
+		'
+		Me.butWrite.Dock = System.Windows.Forms.DockStyle.Right
+		Me.butWrite.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.butWrite.Location = New System.Drawing.Point(183, 0)
+		Me.butWrite.Name = "butWrite"
+		Me.butWrite.Size = New System.Drawing.Size(47, 49)
+		Me.butWrite.TabIndex = 1
+		Me.butWrite.Text = "W"
+		Me.butWrite.UseVisualStyleBackColor = True
+		'
 		'txtValue
 		'
-		Me.txtValue.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txtValue.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.txtValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtValue.Location = New System.Drawing.Point(4, 4)
+		Me.txtValue.Location = New System.Drawing.Point(0, 0)
 		Me.txtValue.Multiline = True
 		Me.txtValue.Name = "txtValue"
 		Me.txtValue.ReadOnly = True
-		Me.txtValue.Size = New System.Drawing.Size(171, 42)
-		Me.txtValue.TabIndex = 0
-		Me.txtValue.Text = "12345678"
+		Me.txtValue.Size = New System.Drawing.Size(183, 49)
+		Me.txtValue.TabIndex = 2
 		'
-		'PLCNumberBox
+		'PLCEditBox
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.Controls.Add(Me.txtValue)
-		Me.Name = "PLCNumberBox"
-		Me.Size = New System.Drawing.Size(178, 50)
+		Me.Controls.Add(Me.butWrite)
+		Me.Name = "PLCEditBox"
+		Me.Size = New System.Drawing.Size(230, 49)
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
 	End Sub
+	Friend WithEvents butWrite As System.Windows.Forms.Button
 	Friend WithEvents txtValue As System.Windows.Forms.TextBox
 
 End Class

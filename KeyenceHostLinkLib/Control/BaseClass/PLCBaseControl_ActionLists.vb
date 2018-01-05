@@ -9,11 +9,12 @@
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Windows.Forms
+Imports System.Drawing.Design
 
 Public Class PLCBaseControl_ActionLists
 	Inherits DesignerActionList
-	Private dtc As PLCBaseControl
-	Private designerActionUISvc As DesignerActionUIService
+	Friend dtc As PLCBaseControl
+	Public designerActionUISvc As DesignerActionUIService
 	Public Sub New(ByRef component As IComponent)
 		MyBase.New(component)
 		Me.dtc = TryCast(component, PLCBaseControl)
@@ -22,20 +23,21 @@ Public Class PLCBaseControl_ActionLists
 		' DesigneractionList can be refreshed.
 		Me.designerActionUISvc = TryCast(GetService(GetType(DesignerActionUIService)), DesignerActionUIService)
 	End Sub
-    Public Property MemoryType() As String
-    	Get
-    		Return dtc.MemoryType
+	<Editor(GetType(PLCBaseControl_MemoryType_Editer), GetType(UITypeEditor)), DefaultValue(".U")>
+	Public Property MemoryType() As String
+		Get
+			Return dtc.MemoryType
 		End Get
-		Set
-			GetPropertyByName("MemoryType").SetValue(dtc, Value)
+		Set(value As String)
+			GetPropertyByName("MemoryType").SetValue(dtc, value)
 		End Set
 	End Property
 	Public Property MemoryAddress() As Integer
 		Get
 			Return dtc.PLCAddress
 		End Get
-		Set
-			GetPropertyByName("PLCAddress").SetValue(dtc, Value)
+		Set(value As Integer)
+			GetPropertyByName("PLCAddress").SetValue(dtc, value)
 		End Set
 	End Property
 	Public Property PLC_Link() As HostlinkKeyence
@@ -46,7 +48,15 @@ Public Class PLCBaseControl_ActionLists
 			GetPropertyByName("PLCLink").SetValue(dtc, value)
 		End Set
 	End Property
-
+	<Editor(GetType(PLCBaseControl_DataFormat_Editer), GetType(UITypeEditor)), DefaultValue(".U")>
+	Public Property DataFormat As String
+		Get
+			Return dtc.DataFormat
+		End Get
+		Set(value As String)
+			GetPropertyByName("DataFormat").SetValue(dtc, value)
+		End Set
+	End Property
 	Private Function GetPropertyByName(propName As String) As PropertyDescriptor
 		Dim prop As PropertyDescriptor
 		prop = TypeDescriptor.GetProperties(dtc)(propName)

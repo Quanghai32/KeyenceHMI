@@ -75,14 +75,22 @@
     </Compile>
     <Compile Include="Control\BaseClass\PLCBaseControl_ActionLists.vb" />
     <Compile Include="Control\BaseClass\PLCBaseControl_Designer.vb" />
+    <Compile Include="Control\BaseClass\PLCBaseControl_DataFormat_Editer.vb" />
+    <Compile Include="Control\BaseClass\PLCBaseControl_MemoryType_Editer.vb" />
     <Compile Include="Control\ChangePage\PLCButtonChange_ActionLists.vb" />
-    <Compile Include="Control\ChangePage\PLCButtonChange_Designer.vb" />
     <Compile Include="Control\ChangePage\PLCButtonChange.Designer.vb">
       <DependentUpon>PLCButtonChange.vb</DependentUpon>
     </Compile>
     <Compile Include="Control\ChangePage\PLCButtonChange.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Control\LabelComment\PLCComment.Designer.vb">
+      <DependentUpon>PLCComment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LabelComment\PLCComment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LabelComment\PLCComment_ActionList.vb" />
     <Compile Include="Control\NumberBox\PLCNumberBox_ActionLists.vb" />
     <Compile Include="Control\NumberBox\PLCNumberBox_Designer.vb" />
     <Compile Include="Control\NumberBox\PLCNumberBox.Designer.vb">
@@ -93,15 +101,14 @@
     </Compile>
     <Compile Include="Control\NumberBox\PLCNumberbox_DataFormat_Editer.vb" />
     <Compile Include="Control\NumberBox\PLCNumberBox_MemoryType_Editer.vb" />
-    <Compile Include="Control\LabelComment\PLCLabelComment.vb">
+    <Compile Include="Control\PLCEditBox\PLCEditBox.Designer.vb">
+      <DependentUpon>PLCEditBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PLCEditBox\PLCEditBox.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\PLCInputBox.Designer.vb">
-      <DependentUpon>PLCInputBox.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Control\PLCInputBox.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Control\PLCEditBox\PLCEditBox_ActionLists.vb" />
+    <Compile Include="Control\PLCEditBox\PLCEditBox_Designer.vb" />
     <Compile Include="Control\PLCOutput.Designer.vb">
       <DependentUpon>PLCOutput.vb</DependentUpon>
     </Compile>
@@ -112,9 +119,6 @@
       <DependentUpon>PLCRunningStatus.vb</DependentUpon>
     </Compile>
     <Compile Include="Control\RunningStatus\PLCRunningStatus.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\RunningStatus\PLCRunningStatus2.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\RunningStatus\PLCRunningStatus_ActionLists.vb" />
@@ -150,14 +154,14 @@
     <EmbeddedResource Include="Control\ChangePage\PLCButtonChange.resx">
       <DependentUpon>PLCButtonChange.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\LabelComment\PLCComment.resx">
+      <DependentUpon>PLCComment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\NumberBox\PLCNumberBox.resx">
       <DependentUpon>PLCNumberBox.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\LabelComment\PLCLabelComment.resx">
-      <DependentUpon>PLCLabelComment.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\PLCInputBox.resx">
-      <DependentUpon>PLCInputBox.vb</DependentUpon>
+    <EmbeddedResource Include="Control\PLCEditBox\PLCEditBox.resx">
+      <DependentUpon>PLCEditBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\PLCOutput.resx">
       <DependentUpon>PLCOutput.vb</DependentUpon>

@@ -9,14 +9,14 @@
 Imports System.ComponentModel.Design
 Imports System.Windows.Forms.Design
 
-Public Class PLCButtonChange_Designer
+Public Class PLCEditBox_Designer
 	Inherits System.Windows.Forms.Design.ControlDesigner
 	Private _actionLists As DesignerActionListCollection
 	Public Overrides ReadOnly Property actionLists As DesignerActionListCollection
 		Get
 			If IsNothing(_actionLists) Then
 				_actionLists = New DesignerActionListCollection()
-				_actionLists.Add(New PLCButtonChange_ActionLists(Me.Component))
+				_actionLists.Add(New PLCEditBox_ActionLists(Me.Component))
 			End If
 			Return _actionLists
 		End Get

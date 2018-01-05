@@ -11,11 +11,11 @@ Imports System.ComponentModel.Design
 
 Public Class PLCRunningStatus_ActionLists
 	Inherits DesignerActionList
-	Private dtc As PLCBaseControl
+	Private dtc As PLCRunningStatus
 	Private designerActionUISvc As DesignerActionUIService
 	Public Sub New(ByRef component As IComponent)
 		MyBase.New(component)
-		Me.dtc = TryCast(component, PLCRunningStatus2)
+		Me.dtc = TryCast(component, PLCRunningStatus)
 
 		' Cache a reference to DesignerActionUIService, so the
 		' DesigneractionList can be refreshed.
@@ -32,6 +32,14 @@ Public Class PLCRunningStatus_ActionLists
 		End Set
 	End Property
 
+	Public Property DisplayOnly As Boolean
+		Get
+			Return dtc.DisplayOnly
+		End Get
+		Set(value As Boolean)
+			GetPropertyByName("DisplayOnly").SetValue(dtc, value)
+		End Set
+	End Property
 	Private Function GetPropertyByName(propName As String) As PropertyDescriptor
 		Dim prop As PropertyDescriptor
 		prop = TypeDescriptor.GetProperties(dtc)(propName)

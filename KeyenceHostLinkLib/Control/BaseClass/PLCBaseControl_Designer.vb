@@ -9,14 +9,15 @@
 Imports System.ComponentModel.Design
 Imports System.Windows.Forms.Design
 
-Public Class PLCBaseControl_Designer
+Public Class PLCBaseControl_Designer(Of T As {DesignerActionList})
 	Inherits System.Windows.Forms.Design.ControlDesigner
-	Private  _actionLists As DesignerActionListCollection
+	Private _actionLists As DesignerActionListCollection
 	Public Overrides ReadOnly Property actionLists As DesignerActionListCollection
 		Get
 			If IsNothing(_actionLists) Then
 				_actionLists = New DesignerActionListCollection()
-				_actionLists.Add(new PLCBaseControl_ActionLists(Me.Component))
+				Dim aaa As Object = Activator.CreateInstance(GetType(T), Me.Component)
+				_actionLists.Add(CType(aaa, T))
 			End If
 			Return _actionLists
 		End Get

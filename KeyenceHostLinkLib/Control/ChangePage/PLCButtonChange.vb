@@ -1,7 +1,8 @@
 ﻿Imports System.Windows.Forms
 Imports System.ComponentModel
+Imports System.Drawing
 
-<Serializable(), Designer(GetType(PLCButtonChange_Designer))>
+<Serializable(), Designer(GetType(PLCBaseControl_Designer(Of PLCButtonChange_ActionLists)))>
 Public Class PLCButtonChange
 
 #Region "Properties"
@@ -53,5 +54,12 @@ Public Class PLCButtonChange
 		End If
 	End Sub
 
-	
+
+	Private Sub PLCButtonChange_Load(sender As Object, e As EventArgs) Handles Me.Load
+		If Not IsNothing(MainPage) And Not DesignMode Then
+			MainPage.ItemSize = New Size(0, 1)
+			'MainPage.SizeMode = TabSizeMode.Fixed
+			'MainPage.Appearance = TabAppearance.FlatButtons
+		End If
+	End Sub
 End Class

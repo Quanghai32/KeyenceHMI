@@ -11,13 +11,13 @@ Imports System.ComponentModel.Design
 Imports System.Windows.Forms
 Imports System.Drawing.Design
 
-Public Class PLCNumberBox_ActionLists
+Public Class PLCEditBox_ActionLists
 	Inherits DesignerActionList
-	Private dtc As PLCNumberBox
+	Private dtc As PLCEditBox
 	Private designerActionUISvc As DesignerActionUIService
 	Public Sub New(ByRef component As IComponent)
 		MyBase.New(component)
-		Me.dtc = TryCast(component, PLCNumberBox)
+		Me.dtc = TryCast(component, PLCEditBox)
 
 		' Cache a reference to DesignerActionUIService, so the
 		' DesigneractionList can be refreshed.
